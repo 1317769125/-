@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>点的闪烁</title>
+	<style type="text/css">
+		.exmple{
+			position: absolute;
+			top: 400px;
+			left: 400px;
+		}
+		.dot:before{
+			content: ' ';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10px;
+			height: 10px;
+			background: #ff4200;
+			border-radius: 50%;
+		}
+		.dot:after{
+			content: ' ';
+			width: 10px;
+			height: 10px;
+			background: #ff4200;
+			position: absolute;
+			border-radius: 50%;
+		 	/* box-shadow: 0 0 10px rgba(0,0,0,.3) inset; */
+			-webkit-animation: myfirst 3s infinite;
+			-moz-animation: myfirst 3s infinite;
+			-o-animation: myfirst 3s infinite;
+			animation: myfirst 3s infinite;
+		}
+		@keyframes myfirst {
+			0%{
+				
+				width:10px;
+				height:10px;
+				opacity:;
+			}
+			100%{
+				
+				width:50px;
+				height:50px;
+				opacity:0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="exmple">
+		<div class="dot"></div>
+	</div>
+</body>
+</html>

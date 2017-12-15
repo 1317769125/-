@@ -1,0 +1,83 @@
+a{
+	text-decoration: none;
+}
+/* a:hover{
+	text-decoration: underline;
+} */
+h1{
+	margin: 0;
+	padding: 0;
+}
+#container{
+	width: 1220px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+#globallink{
+	width: 1220px;
+}
+#globallink .head{
+	height: 85px;
+	background: red;
+	line-height: 85px;
+	background: red url('../logo.png') no-repeat center left;
+}
+#globallink .logo{
+	
+	/* vertical-align: middle; */
+}
+#globallink h1{
+	text-transform: uppercase;
+	text-align: center;
+	/* line-height: 85px; */
+}
+#globallink ul{
+	overflow: hidden;
+	text-decoration: none;
+}
+#globallink ul li{
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+}
+.line{
+	height: 3px;
+	width: 0;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	background: #FFFF00;
+}
+
+#parameter{
+	clear: both;
+	width: 400px;
+	/* height: 600px; */
+	border: 1px dotted #111111;
+	float: left;
+
+}
+#parameter div{
+	width: 350px;
+	height: 50px;
+	margin: 1px auto;
+	background: purple;
+}
+#main{
+	width: 800px;
+	/* height: 600px; */
+	border: 1px dotted #111111;
+	float: right;
+}
+#main article{
+	width: 750px;
+	height: 180px;
+	margin: 10px auto;
+	background: black;
+}
+#footer{
+	clear: both;
+	width: 1220px;
+	height: 200px;
+	border: 1px solid #111111;
+}

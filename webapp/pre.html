@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pre标签样式</title>
+	<style type="text/css">
+	h1{
+		text-align: center;
+	}
+	h1>span{
+		color: #8FC1C7;
+	}
+	h1>small{
+		font-size: 12px;
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: 1.3em;
+		color: #CCCCCC;
+	}
+	header{
+		text-align: center;
+		padding: 20px;
+		background: #CCCEEE;
+	}
+	nav{
+		padding: 10px;
+		background: #EEECCC;
+		text-align: center;
+	}
+	nav a{
+		text-decoration: none;
+		border-radius: 5px;
+		/* display: inline-block; */
+		/* display: inline; */
+		/* display: inline-table; */
+		/* display: inline-flex; */
+	}
+	main{
+		text-align: center;
+	}
+	main div.center{
+		/* width: 400px; */
+		/* margin-left: auto;
+		margin-right: auto; */
+		display: inline-block;
+	}
+	.box{
+		width:300px;
+		height: 300px;
+		resize: both;
+		margin: 20px auto;
+		resize: both;
+		position: relative;
+		background: #CCCCCC;
+	}
+	.box div{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 200px;
+		height: 200px;
+		padding: 20px;
+		margin: -120px 0 0 -120px;
+		background: #111111;
+	}
+	.box_center{
+		width: 300px;
+		height: 300px;
+		margin: 10px auto;
+		background: #CCCCCC;
+		position: relative;
+		resize: both;
+	}
+	.box_center div{
+		width: 200px;
+		height: 200px;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		padding: 20px;
+		background: #111111;
+		top: 50%;
+		left: 50%;
+
+	}
+	div>p{
+		width: 200px;
+		margin: 10px auto;
+		background: #CCCCCC;
+	}
+	div p::before{
+		/* content: "↗"; */
+		counter-increment: chapter;
+		content: "Chapter" counter(chapter);
+	}
+	div>p::after{
+		/* content: attr(class); */
+		/* content: url('logo.png'); */
+	}
+
+	</style>
+</head>
+<body>
+	<h1>
+		<span>&lt;pre&gt; / code</span>
+		样式美化
+		<small>by commy</small>
+	</h1>
+	
+<br>
+	<header>
+		This is contered
+	</header>
+	<nav role="navigation">
+		<a href="#0" title="">One</a>
+		<a href="#0" title="">Two</a>
+		<a href="#0" title="">Three</a>
+		<a href="#0" title="">Four</a>
+	</nav>
+<br>
+	<main>
+		<div class="center">
+			I'm a block level element and am contered
+		</div>	
+	</main>
+<br>
+	<div class="box">
+		<div></div>
+	</div>
+<br>
+	<div class="box_center">
+		<div></div>
+	</div>
+<br>
+	<div>
+		<p class="12324"></p>
+		<p></p>
+	</div>
+<br>
+	<div class="test-a">
+		<a href="">hello</a>
+		<a href="" title="">world</a>
+	</div>
+<br>
+	<div class="a-test">
+		<a href="">HELLO</a>
+	</div>
+<br>
+	<div class="triangle">
+		
+	</div>
+<br>
+	<div class="div-zoom">
+		<div class="first-div">hello world</div>
+		<div class="second-div">hello world</div>
+		<div class="third-div">hello world</div>
+		<div class="four-div">hello world</div>
+	</div>
+<br>
+	<div class="float">
+		<div>123</div>
+		<div>456</div>
+		<div>789</div>
+	</div>
+	<div class="t">
+		987654321
+	</div>
+<br style="clear:both;">
+	<div class="logo">
+		<img src="./logo.png" alt="">
+	</div>
+</body>
+<style type="text/css" media="screen">
+	.logo{
+		width: 200px;
+		height: 100px;
+		background: red;
+		line-height: 100px;
+	}
+	.logo img{
+		vertical-align: middle;
+	}
+
+	.t{
+		width: 200px;
+		height: 10px;
+		background: black;
+		clear: both;
+	}
+
+	.float{
+		width: 200px;
+		margin: 10px auto;
+		/* overflow: hidden; */
+	}
+	.float div{
+		float: left;
+	}
+	.float div:last-child::after{
+		clear: both;
+		content: "";
+		display: block;
+	}
+	body{
+		font-size: 12px;
+	}
+	/* html{
+		font-size: 12px;
+	} */
+	.div-zoom div{
+		width: 200px;
+		height: 100px;
+		float: left;
+	}
+	.div-zoom::after{
+		clear: both;
+	}
+	.div-zoom .first-div{
+		font-size: 1em;
+		line-height: 190px;
+	}
+	.div-zoom .second-div{
+		font-size: 1.5em;
+		line-height: 190px;
+	}
+	.div-zoom .third-div{
+		font-size: 1rem;
+		
+	}
+	.div-zoom .four-div{
+		font-size: 1.5rem;
+		
+	}
+
+	.triangle{
+        position: relative;  /*日常相对定位*/
+        width:150px;
+        height: 36px;
+        border:1px solid black;
+        border-radius:5px;
+        background: rgba(245,245,245,1)
+    }
+    .triangle::before,.triangle::after{
+        content: "";  /*:before和:after必带技能，重要性为满5颗星*/
+        display: block;
+        position: absolute;  /*日常绝对定位*/
+        top:8px;
+        width: 0;
+        height: 0;
+        border:6px solid transparent;
+    }
+    .triangle::before{
+        left:-11px;
+        border-right-color: rgba(245,245,245,1);
+        z-index:1
+    }
+    .triangle::after{
+        left:-12px;
+        border-right-color: rgba(0,0,0,1);
+        z-index: 0
+    }
+
+
+	.a-test{
+		width: 300px;
+		height: 30px auto;
+	}
+	.a-test a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	color: #000;
+	font-size: 32px;
+	padding: 0 10px;
+}
+
+/* 大框 */
+.a-test a:hover::before, .a-test a:hover::after { 
+	content: "";
+	display: block;
+	/* position: absolute;
+	top: -15%%;
+	left: -14%%; */
+	width: 120%;
+	height: 120%; 
+	border-style: solid;
+	border-width: 4px;
+	border-color: #DDD;
+ }
+
+/* 小框 */
+ .a-test a:hover::after {
+ 	/* top: 0%;
+ 	left: 0%;
+	width: 100%;
+	height: 100%;
+	border-width: 2px; */
+ }
+
+
+	.test-a{
+		width: 300px;
+		margin: 10px auto;
+	}
+	.test-a a{
+		position: relative;
+		text-decoration: none;
+		display: inline-block;
+		margin: 0 10px;
+		text-transform: uppercase;
+		letter-spacing: 1em;
+	}
+	.test-a a:hover{
+		/* color: #DECDEC; */
+	}
+	.test-a a::before{
+		content: "";
+		-moz-transition:left 1s; /* Firefox 4 */
+		-webkit-transition:left 1s; /* Safari and Chrome */
+		-o-transition:left 1s; /* Opera */
+		transition: left 1s;
+		position: absolute;
+		left: -10px;
+	}
+	.test-a a::after{
+		content: "";
+		-moz-transition:right 1s; /* Firefox 4 */
+		-webkit-transition:right 1s; /* Safari and Chrome */
+		-o-transition:right 1s; /* Opera */
+		transition: right 1s;
+		position: absolute;
+		right: -10px;
+	}
+	.test-a a:hover::before,
+	.test-a a:hover::after{
+		position: absolute;
+
+	}
+	.test-a a:hover::before{
+		content: "\5B";
+		left: -20px;
+		font-weight: bolder;
+	}
+	.test-a a:hover::after{
+		content: "\5D";
+		right: -20px;
+		font-weight: bolder;
+	}
+</style>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MY BLOG</title>
+	<link rel="stylesheet" type="text/css" href="./css/blog.css">
+</head>
+<body>
+	<div id="container">
+		<div id="globallink">
+			<div class="head">
+				<!-- <img class="logo" src="./logo.png" alt=""> -->
+				<h1>blog</h1>
+			</div>
+			<ul>
+				<li><a href="" title="">首页</a></li>
+				<li><a href="" title="">控制个人面板</a></li>
+				<li><a href="" title="">我的文章</a></li>
+				<li><a href="" title="">我的相册</a></li>
+				<li><a href="" title="">我的圈子</a></li>
+				<li><a href="" title="">给我留言</a></li>
+				<a class="line"></a>
+			</ul>
+		</div>
+		<div id="parameter">
+			<div class="author"></div>
+			<div class="link"></div>
+			<div class="category"></div>
+			<div class="latest"></div>
+			<div class="comment"></div>
+			<div class="frind"></div>
+		</div>
+		<div id="main">
+			<article></article>
+			<article></article>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+<script src="./js/jquery-1.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function(){
+		$('ul li').hover(function() {
+			var wid = $(this).width();
+			var bb = $(this).index();
+			console.log(bb);
+			$('.line').css({
+				width: wid,
+				position: 'absolute',
+				top:'0',
+				left:bb
+			});
+
+		}, function() {
+			/* Stuff to do when the mouse leaves the element */
+		});
+	})
+</script>
+</html>
