@@ -999,16 +999,12 @@ echo '<br>';
 echo iconv('GB2312','UTF-8',$str);*/
 
 //echo serialize(array('content' => '嗯？怎么说好呢 因为是第一次玩这个软件 而且找的设计师又刚好是女生 很了解女生所需要的感觉 最最主要的是服务很贴心 当然还陪我话唠了好久'));
-$n = 10;
-$m = 5;
-$arr = range(0, $n);
-unset($arr[0]);
-if(count($arr)>$m){
-	foreach ($arr as $item) {
-		if($item == $m){
+echo date('Y-m'),'<br>';
+$time = strtotime(date('Y-m'));
+echo $time,'<br>';
+echo strtotime('2017-12-01');
 
-		}
-	}
-}
+
+
 
 
