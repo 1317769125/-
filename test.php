@@ -999,12 +999,14 @@ echo '<br>';
 echo iconv('GB2312','UTF-8',$str);*/
 
 //echo serialize(array('content' => '嗯？怎么说好呢 因为是第一次玩这个软件 而且找的设计师又刚好是女生 很了解女生所需要的感觉 最最主要的是服务很贴心 当然还陪我话唠了好久'));
-echo date('Y-m'),'<br>';
-$time = strtotime(date('Y-m'));
-echo $time,'<br>';
-echo strtotime('2017-12-01');
+//echo date('Y-m'),'<br>';
+//$time = strtotime(date('Y-m'));
+//echo $time,'<br>';
+//echo strtotime('2017-12-01');
 
+//$json = file_get_contents("json/aaabbb.txt");
+//echo str_replace(array('"{','}"','"[',']"'),array('{','}','[',']'),stripslashes($json));
 
-
-
-
+$str = "a:2:{s:7:\"content\";s:30:\"技术不错，服务很棒。\";s:7:\"picture\";s:0:\"\"}";
+$v   = "a:2:{s:7:\"content\";s:30:\"技术不错，服务很棒。\";s:7:\"picture\";s:0:\"\";}";
+print_r(serialize(array('content'=>'技术不错，服务很棒。','picture'=>'')));
